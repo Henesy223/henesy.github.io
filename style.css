@@ -1,0 +1,169 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+body {
+    background-color: rgb(28, 30, 31);
+    background-image: none;
+}
+
+header {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #1c1c1c;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+header p {
+    white-space: nowrap;
+}
+
+.main1 {
+    height: 60vh;
+    overflow: hidden;
+}
+
+@media (max-width: 1681px) {
+    .main1 {
+        height: auto;
+        overflow: hidden;
+    }
+}
+
+.language-switcher {
+    text-align: center;
+    margin-top: 10px;
+}
+
+main {
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 70px;
+}
+
+.main__img {
+    width: 100%;
+}
+
+.main2 {
+    margin-bottom: 120px;
+    padding: 0 10%;
+}
+
+.story {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.story__tittle {
+    white-space: nowrap;
+}
+
+.story__text {
+    max-width: 900px;
+    margin-left: 50px;
+    text-align: start;
+}
+
+.schedule {
+    margin: 20px 0;
+}
+
+.schedule table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.schedule th, .schedule td {
+    border: 1px solid #333333;
+    padding: 10px;
+    text-align: center;
+}
+
+.schedule th {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+h3 {
+    text-align: center;
+    margin: 6% auto;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.slider {
+    display: flex;
+    height: 350px;
+    max-height: auto;
+    overflow-y: hidden;
+    overflow-x: scroll !important;
+    padding: 16px;
+    scroll-behavior: smooth;
+}
+
+.slider::-webkit-scrollbar {
+    height: 5px;
+    display: none;
+}
+
+.slide {
+    position: relative;
+    margin: 0 10px;
+}
+
+.slide img {
+    height: 100%;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .25s ease-in-out;
+}
+
+.text-overlay {
+    max-width: 250px;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 10px;
+    border-radius: 0 0 15px 15px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.slide:hover .text-overlay {
+    transform: translateY(0);
+}
+
+.teacher-name {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.teacher-position {
+    font-size: 1em;
+}
+
+footer {
+    background: #1c1c1c;
+    text-align: center;
+    padding: 10px 0;
+}
